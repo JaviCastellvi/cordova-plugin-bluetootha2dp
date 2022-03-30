@@ -1,5 +1,5 @@
 {
-  "name": "bluetootha2dp",
+  "name": "cordova-plugin-bluetootha2dp",
   "version": "1.1.0",
   "description": "Use the Bluetooth A2DP profile plugin to connect your Cordova app to new Bluetooth devices likeheadphones and bluetooth speakers.",
   "main": "index.js",
@@ -15,5 +15,13 @@
     "cordova-android"
   ],
   "author": "Javi Castellví",
-  "license": "ISC"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaviCastellvi/cordova-plugin-bluetootha2dp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JaviCastellvi/cordova-plugin-bluetootha2dp/issues"
+  },
+  "homepage": "https://github.com/JaviCastellvi/cordova-plugin-bluetootha2dp#readme"
 }
