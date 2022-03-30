@@ -1,5 +1,5 @@
 
-# [Cordova Bluetooth A2DP Plugin] (https://github.com/JaviCastellvi/cordova-plugin-bluetootha2dp)
+# [Cordova Bluetooth A2DP Plugin](https://github.com/JaviCastellvi/cordova-plugin-bluetootha2dp)
 
 This plugin allows you to interact with Android bluetooth devices using the Advanced Audio Distribution Profile (A2DP).
 
