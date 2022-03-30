@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-bluetootha2dp" version="1.0.0">
+  <name>bluetootha2dp</name>
+  <js-module name="bluetootha2dp" src="www/bluetootha2dp.js">
+    <clobbers target="bluetootha2dp"/>
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="BluetoothA2dpPlugin">
+        <param name="android-package" value="cordova.plugin.bluetootha2dp.BluetoothA2dpPlugin"/>
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml"/>
+    <source-file src="src/android/BluetoothA2dpPlugin.java" target-dir="src/cordova/plugin/bluetootha2dp"/>
+  </platform>
+</plugin>
