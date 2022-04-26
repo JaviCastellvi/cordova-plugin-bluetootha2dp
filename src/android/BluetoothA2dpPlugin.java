@@ -138,7 +138,10 @@ public class BluetoothA2dpPlugin extends CordovaPlugin {
     Set<BluetoothDevice> bondedDevices = bluetoothAdapter.getBondedDevices();
 
     for (BluetoothDevice device : bondedDevices) {
-      deviceList.put(deviceToJSON(device));
+      BluetoothClass bluetoothClass = device.getBluetoothClass();
+      if (bluetoothClass.getDeviceClass() == BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES || bluetoothClass.getDeviceClass() == BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET) {
+        deviceList.put(deviceToJSON(device));
+      }
     }
     callbackContext.success(deviceList);
   }
@@ -155,7 +158,10 @@ public class BluetoothA2dpPlugin extends CordovaPlugin {
         List<BluetoothDevice> devices= proxy.getConnectedDevices();
           for(BluetoothDevice device : devices) {
             try {
-              deviceList.put(deviceToJSON(device));
+              BluetoothClass bluetoothClass = device.getBluetoothClass();
+              if (bluetoothClass.getDeviceClass() == BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES || bluetoothClass.getDeviceClass() == BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET) {
+                deviceList.put(deviceToJSON(device));
+              }
             } catch (JSONException e) {
               e.printStackTrace();
             }
